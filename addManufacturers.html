@@ -1,3 +1,6 @@
+<script type="application/javascript" src="JS/jquery-3.3.1.min.js"></script>
+<script type="application/javascript" src="JS/addManufacturer.js"></script>
+
 <form action="addManufacturers" method="post">
     <table>
         <tr>
@@ -14,5 +17,15 @@
             <td>Founded</td>
             <td><input type="date" name="founded" required="required"></td>
         </tr>
+
+        <tr>
+            <td><input type="submit" value="Add Manufacturer"></td>
+        </tr>
     </table>
+
+    <input type="button" value="List Manufacturers" onclick=openManufacturer()>
+
+    <div id="DatabaseContent">
+
+    </div>
 </form>
