@@ -1,6 +1,7 @@
 <script type="application/javascript" src="JS/jquery-3.3.1.min.js"></script>
 <script type="application/javascript" src="JS/addCar.js"></script>
 
+
 <form action="addCar" method="post">
     <table>
         <tr>
@@ -39,11 +40,10 @@
         </tr>
 
         <tr>
-            <td><input type="submit" value="Add Car"></td>
+            <td><input type="submit" Class="CarButton" value="Add Car"></td>
+            <td><input type="button" class="CarButton" value="List Cars" onclick=openCar()></td>
         </tr>
     </table>
-
-    <input type="button" value="List Manufacturers" onclick=openCar()>
 
     <div id="DatabaseContent">
 

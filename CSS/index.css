@@ -1,0 +1,86 @@
+body{
+    background: lightsteelblue;
+}
+
+#FullPage{
+    width: 100%;
+    margin: auto;
+}
+
+#banner{
+    height: 160px;
+    background: royalblue;
+    font-size: 30px;
+    color: cornflowerblue;
+    padding: auto;
+}
+
+#banner .title{
+    font-size: 10vmin;
+    padding-left: 18%;
+    overflow: hidden;
+}
+
+
+/*Dropdown Menu--------------------------------------------------*/
+#menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownMenu {
+    background-color: dodgerblue;
+    color: white;
+    padding: 51px;
+    font-size: 50px;
+    border: none;
+    min-width: 250px;
+    min-height: 160px;
+
+
+}
+
+.menuButtons {
+    display: none;
+    position: absolute;
+    background-color: dodgerblue;
+    min-width: 250px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    /*z-index: 1;*/
+    font-size: 16px;
+    margin-left: 250px;
+    margin-top: -160px;
+}
+
+.menuButtons a {
+    color: white;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+
+.menuButtons a:hover {background-color: darkcyan;}
+
+#menu:hover .menuButtons {display: block;}
+
+#menu:hover .dropdownMenu {background-color: darkcyan;}
+
+/*Menu end-------------------------------------------------------*/
+
+.CarButton {
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.ManufacturerButton {
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}

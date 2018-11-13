@@ -48,6 +48,7 @@ function openCar() {
 
 }
 
+
 function openManufacturer() {
     $.getJSON('manufacturers', function (data) {
         var table = $('<table id="ManufacturerTable"></table>');
