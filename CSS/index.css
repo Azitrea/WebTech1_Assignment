@@ -107,6 +107,7 @@ body{
 #DatabaseContentCars{
     display: inline-block;
     position: absolute;
+    margin-top: 10px;
 }
 
 #DatabaseContentCars .CarTable{
@@ -136,6 +137,7 @@ body{
 #DatabaseContentManufacturers{
     display: inline-block;
     position: absolute;
+    margin-top: 10px;
 }
 
 #DatabaseContentManufacturers .ManufacturerTable{
