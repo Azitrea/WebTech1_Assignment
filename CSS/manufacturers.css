@@ -1,0 +1,36 @@
+#DatabaseContentManufacturers{
+    display: inline-block;
+    position: absolute;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#DatabaseContentManufacturers .ManufacturerTable{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+    border-collapse: collapse;
+}
+
+#DatabaseContentManufacturers .ManufacturerTable tr td{
+    border: 1px solid black;
+    padding: 5px;
+
+}
+
+#DatabaseContentManufacturers table tr:first-child{
+    background: mediumblue;
+}
+
+.ManufacturerButton {
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+}
+
+#DatabaseContentManufacturers .ManufacturerTable .notFirstRow:hover {
+    background-color: midnightblue;
+}

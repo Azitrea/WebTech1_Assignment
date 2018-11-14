@@ -18,11 +18,11 @@ $(document).ready(function () {
 
 function openCar() {
     $.getJSON('cars', function (data) {
-        var table = $('<table id="CarTable"></table>');
-        table.append("<tr><th>name</th><th>consumption</th><th>color</th><th>manufacturer</th><th>year</th><th>available</th><th>horsepower</th>");
+        var table = $('<table class="CarTable"></table>');
+        table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th><th>Manufacturer</th><th>Year</th><th>Available</th><th>Horsepower</th>");
 
         $.each(data, function (key, value) {
-                var row = $('<tr></tr>');
+                var row = $('<tr class="notFirstRow"></tr>');
                 var nameCell = $('<td >' + value.name + ' </td>');
                 var consumptionCell = $('<td>' + value.consumption + '</td>');
                 var colorCell = $('<td>' + value.color + '</td>');
@@ -42,7 +42,8 @@ function openCar() {
 
             }
         );
-        $("#DatabaseContent").html(table);
+        $("#DatabaseContentManufacturers").empty();
+        $("#DatabaseContentCars").html(table);
 
     })
 
@@ -51,11 +52,11 @@ function openCar() {
 
 function openManufacturer() {
     $.getJSON('manufacturers', function (data) {
-        var table = $('<table id="ManufacturerTable"></table>');
-        table.append("<tr><th>name</th><th>consumption</th><th>color</th>");
+        var table = $('<table class="ManufacturerTable"></table>');
+        table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th>");
 
         $.each(data, function (key, value) {
-                var row = $('<tr></tr>');
+                var row = $('<tr class="notFirstRow"></tr>');
                 var nameCell = $('<td >' + value.name + ' </td>');
                 var countryCell = $('<td>' + value.country+ '</td>');
                 var foundedCell = $('<td>' + value.founded + '</td>');
@@ -67,7 +68,8 @@ function openManufacturer() {
 
             }
         );
-        $("#DatabaseContent").html(table);
+        $("#DatabaseContentCars").empty();
+        $("#DatabaseContentManufacturers").html(table);
 
     })
 

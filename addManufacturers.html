@@ -1,29 +1,36 @@
 <script type="application/javascript" src="JS/jquery-3.3.1.min.js"></script>
 <script type="application/javascript" src="JS/addManufacturer.js"></script>
 
+<link rel="stylesheet" type="text/css" href="CSS/manufacturers.css">
+
 <form action="addManufacturers" method="post">
-    <table id="inputTable">
+    <table class="inputTable">
         <tr>
-            <td>Name</td>
-            <td><input type="text" name="name" required="required"></td>
-        </tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="name" required="required"></td>
+                    </tr>
 
-        <tr>
-            <td>Country</td>
-            <td><input type="text" name="country" required="required"></td>
-        </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><input type="text" name="country" required="required"></td>
+                    </tr>
 
-        <tr>
-            <td>Founded</td>
-            <td><input type="date" name="founded" required="required"></td>
+                    <tr>
+                        <td>Founded</td>
+                        <td><input type="date" name="founded" required="required"></td>
+                    </tr>
+                </table>
+            </td>
         </tr>
-
         <tr>
             <td><input type="submit" class="ManufacturerButton" value="Add Manufacturer"></td>
         </tr>
     </table>
 
-    <div id="DatabaseContent">
+    <div id="DatabaseContentManufacturers">
 
     </div>
 </form>

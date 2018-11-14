@@ -1,0 +1,37 @@
+#DatabaseContentCars{
+    display: inline-block;
+    position: absolute;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#DatabaseContentCars .CarTable{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+    border-collapse: collapse;
+}
+
+#DatabaseContentCars .CarTable tr td{
+    border: 1px solid black;
+    padding: 5px;
+
+}
+
+#DatabaseContentCars .CarTable tr:first-child{
+    background: mediumblue; !important;
+}
+
+
+.CarButton {
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+}
+
+#DatabaseContentCars .CarTable .notFirstRow:hover {
+    background-color: midnightblue;
+}

@@ -38,7 +38,6 @@ body{
     min-width: 250px;
     min-height: 160px;
 
-
 }
 
 .menuButtons {
@@ -75,6 +74,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    width: 300px;
 }
 
 .ManufacturerButton {
@@ -83,25 +83,84 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    width: 300px;
 
 }
 
-#inputTable{
-    border: 3px solid blue;
+.inputTable{
+    border: 3px solid midnightblue;
     display: inline-block;
     position: relative;
+    background: royalblue;
+    border-collapse: collapse;
+    color: white;
+    font-size: 30px;
 }
 
+.inputTable input{
+    width: 100%;
+    height: 100%;
 
-#DatabaseContent{
+}
+
+/*Cars table index page-----------------------------------------------*/
+#DatabaseContentCars{
     display: inline-block;
     position: absolute;
-    margin-left: 20%;
 }
 
-#DatabaseContent table, tr, td{
-    border: 1px solid black;
+#DatabaseContentCars .CarTable{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+    border-collapse: collapse;
 }
+
+#DatabaseContentCars .CarTable tr td{
+    border: 1px solid black;
+    padding: 5px;
+
+}
+
+#DatabaseContentCars .CarTable tr:first-child{
+    background: mediumblue;
+}
+
+#DatabaseContentCars .CarTable .notFirstRow:hover {
+    background-color: midnightblue;
+}
+/*Cars table index page END-----------------------------------------------*/
+
+
+/*Manufacturers table index page--------------------------------------*/
+#DatabaseContentManufacturers{
+    display: inline-block;
+    position: absolute;
+}
+
+#DatabaseContentManufacturers .ManufacturerTable{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+    border-collapse: collapse;
+}
+
+#DatabaseContentManufacturers .ManufacturerTable tr td{
+    border: 1px solid black;
+    padding: 5px;
+
+}
+
+#DatabaseContentManufacturers table tr:first-child{
+    background: mediumblue;
+}
+
+#DatabaseContentManufacturers .ManufacturerTable .notFirstRow:hover {
+    background-color: midnightblue;
+}
+/*Manufacturers table index page END--------------------------------------*/
+
+
 
 
 
