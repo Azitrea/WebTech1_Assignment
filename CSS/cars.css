@@ -1,7 +1,7 @@
 #DatabaseContentCars{
     display: inline-block;
     position: absolute;
-    margin-left: 20%;
+    margin-left: 5%;
     margin-right: 20%;
 }
 
@@ -19,7 +19,7 @@
 }
 
 #DatabaseContentCars .CarTable tr:first-child{
-    background: mediumblue; !important;
+    background: mediumblue;
 }
 
 

@@ -82,3 +82,34 @@ function openCars(cars) {
         alert(data[0].name);
     })
 }*/
+
+
+/*$(function (){
+    $("#DatabaseContentManufacturers").empty();
+    $("#DatabaseContentCars").empty();
+});*/
+
+
+function CarTableLoad() {
+
+    if ($("#DatabaseContentCars").is(':empty')){
+        openCar();
+    }
+    else
+    {
+        $("#DatabaseContentCars").empty();
+    }
+
+}
+
+function ManufacturerTableLoad() {
+
+    if ($("#DatabaseContentManufacturers").is(':empty')){
+        openManufacturer();
+    }
+    else
+    {
+        $("#DatabaseContentManufacturers").empty();
+    }
+
+}

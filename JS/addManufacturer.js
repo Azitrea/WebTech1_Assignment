@@ -9,6 +9,7 @@ $(function () {
                 data: $('form').serialize(),
                 success: function () {
                     openManufacturer();
+                    clearInputFields();
                 },
                 error: function () {
                     alert("oops");
@@ -18,3 +19,9 @@ $(function () {
 })
 
 $(openManufacturer());
+
+function clearInputFields()
+{
+    $(':input').not(':button, :submit, :reset, :hidden, :checkbox, :radio').val('');
+    $(':checkbox, :radio').prop('checked', false);
+}
