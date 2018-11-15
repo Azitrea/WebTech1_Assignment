@@ -19,7 +19,7 @@ $(document).ready(function () {
 function openCar() {
     $.getJSON('cars', function (data) {
         var table = $('<table class="CarTable"></table>');
-        table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th><th>Manufacturer</th><th>Year</th><th>Available</th><th>Horsepower</th>");
+        table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th><th>Manufacturer</th><th>Year</th><th>Available</th><th>Horsepower</th></tr>");
 
         $.each(data, function (key, value) {
                 var row = $('<tr class="notFirstRow"></tr>');
@@ -50,17 +50,27 @@ function openCar() {
 }
 
 
+function ManufacturerCookie(man) {
+    document.cookie = "name=" + man;
+    $.getJSON('manufacturer', function (data) {
+        alert(data[0].name);
+    })
+}
+
+/*onclick="openManufacturer(' + "'" + value.name + "'" + ')"*/
+
+
 function openManufacturer() {
     $.getJSON('manufacturers', function (data) {
         var table = $('<table class="ManufacturerTable"></table>');
-        table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th>");
+        table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th></tr>");
 
         $.each(data, function (key, value) {
                 var row = $('<tr class="notFirstRow"></tr>');
-                var nameCell = $('<td >' + value.name + ' </td>');
+                var nameCell = $('<td onclick="ManufacturerCookie(value.name)">' + value.name + '</td>');
+                /*ManufacturerCookie(value.name);*/
                 var countryCell = $('<td>' + value.country+ '</td>');
                 var foundedCell = $('<td>' + value.founded + '</td>');
-
                 row.append(nameCell);
                 row.append(countryCell);
                 row.append(foundedCell);
@@ -74,21 +84,24 @@ function openManufacturer() {
     })
 
 }
+/*Nem jó*/
+function ManufacturerNames(){
+    $.getJSON('manufacturerNames', function (data) {
+        var table = $('<table></table>');
+        table.append("<tr><th>Name</th></tr>");
 
-/*onclick="openCars(' + "'" + value.name + "'" + ')"
-function openCars(cars) {
-    documnet.cookie = "name=" + cars;
-    $.getJSON('car', function (data) {
-        alert(data[0].name);
+        $.each(data, function (key, value) {
+                var row = $('<tr></tr>');
+                var nameCell = $('<td>' + value.name + '</td>');
+                row.append(nameCell);
+
+                table.append(row);
+
+            }
+        );
+        $("#Manufacturers").html(table);
     })
-}*/
-
-
-/*$(function (){
-    $("#DatabaseContentManufacturers").empty();
-    $("#DatabaseContentCars").empty();
-});*/
-
+}
 
 function CarTableLoad() {
 
