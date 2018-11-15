@@ -42,6 +42,7 @@ function openCar() {
 
             }
         );
+
         $("#DatabaseContentManufacturers").empty();
         $("#DatabaseContentCars").html(table);
 
@@ -53,11 +54,10 @@ function openCar() {
 function ManufacturerCookie(man) {
     document.cookie = "name=" + man;
     $.getJSON('manufacturer', function (data) {
-        alert(data[0].name);
+        for(var i=0;i<data.length;i++)
+        alert(data[i].name);
     })
 }
-
-/*onclick="openManufacturer(' + "'" + value.name + "'" + ')"*/
 
 
 function openManufacturer() {
@@ -67,9 +67,8 @@ function openManufacturer() {
 
         $.each(data, function (key, value) {
                 var row = $('<tr class="notFirstRow"></tr>');
-                var nameCell = $('<td onclick="ManufacturerCookie(value.name)">' + value.name + '</td>');
-                /*ManufacturerCookie(value.name);*/
-                var countryCell = $('<td>' + value.country+ '</td>');
+                var nameCell = $('<td onclick="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.name + '</td>');
+                var countryCell = $('<td>' + value.country + '</td>');
                 var foundedCell = $('<td>' + value.founded + '</td>');
                 row.append(nameCell);
                 row.append(countryCell);
@@ -78,38 +77,21 @@ function openManufacturer() {
 
             }
         );
+
         $("#DatabaseContentCars").empty();
         $("#DatabaseContentManufacturers").html(table);
 
     })
 
 }
-/*Nem jó*/
-function ManufacturerNames(){
-    $.getJSON('manufacturerNames', function (data) {
-        var table = $('<table></table>');
-        table.append("<tr><th>Name</th></tr>");
 
-        $.each(data, function (key, value) {
-                var row = $('<tr></tr>');
-                var nameCell = $('<td>' + value.name + '</td>');
-                row.append(nameCell);
-
-                table.append(row);
-
-            }
-        );
-        $("#Manufacturers").html(table);
-    })
-}
 
 function CarTableLoad() {
 
-    if ($("#DatabaseContentCars").is(':empty')){
+    if ($("#DatabaseContentCars").is(':empty')) {
         openCar();
     }
-    else
-    {
+    else {
         $("#DatabaseContentCars").empty();
     }
 
@@ -117,11 +99,10 @@ function CarTableLoad() {
 
 function ManufacturerTableLoad() {
 
-    if ($("#DatabaseContentManufacturers").is(':empty')){
+    if ($("#DatabaseContentManufacturers").is(':empty')) {
         openManufacturer();
     }
-    else
-    {
+    else {
         $("#DatabaseContentManufacturers").empty();
     }
 

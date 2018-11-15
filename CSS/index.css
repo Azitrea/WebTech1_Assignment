@@ -14,7 +14,6 @@ body{
     color: cornflowerblue;
     padding: auto;
     margin-bottom: 20px;
-    overflow: hidden;
 }
 
 #banner .title{
@@ -23,6 +22,18 @@ body{
     overflow: hidden;
 }
 
+.picture{
+    width: 40%;
+    height: 40%;
+    float: right;
+    position: relative;
+    display: inline-block;
+}
+
+.ph{
+    font-size: 2vw;
+    display: inline-block;
+}
 
 /*Dropdown Menu--------------------------------------------------*/
 #menu {
@@ -87,6 +98,15 @@ body{
 
 }
 
+.indexButton{
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 300px;
+}
+
 .inputTable{
     border: 3px solid midnightblue;
     display: inline-block;
@@ -98,10 +118,15 @@ body{
 }
 
 .inputTable table tr td input{
-    width: 100%;
+    width: 99%;
     height: 30px;
     font-size: 25px;
+}
 
+.inputTable table tr td select{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
 }
 
 /*Cars table index page-----------------------------------------------*/
