@@ -14,6 +14,8 @@ body{
     color: cornflowerblue;
     padding: auto;
     margin-bottom: 20px;
+    float:right;
+    width: 100%;
 }
 
 #banner .title{
@@ -98,7 +100,18 @@ body{
 
 }
 
+
+
 .indexButton{
+    color: black;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 300px;
+}
+
+.inputTableAddButton{
     color: black;
     padding: 17px 16px;
     text-decoration: none;
@@ -187,4 +200,5 @@ body{
     background-color: midnightblue;
 }
 /*Manufacturers table index page END--------------------------------------*/
+
 
