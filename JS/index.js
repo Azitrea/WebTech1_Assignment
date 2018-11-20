@@ -57,7 +57,7 @@ function ManufacturerCookie(man) {
         /*for(var i=0;i<data.length;i++)
         alert(data[i].name);*/
 
-        var table = $('<table class="CarTable"></table>');
+        var table = $('<table class="CookieTable"></table>');
         table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th><th>Manufacturer</th><th>Year</th><th>Available</th><th>Horsepower</th></tr>");
 
         $.each(data, function (key, value) {
@@ -86,16 +86,21 @@ function ManufacturerCookie(man) {
 }
 
 
+function EmptyCookieTable() {
+    $("#CookieTable").empty();
+}
+
+
 function openManufacturer() {
     $.getJSON('manufacturers', function (data) {
-        var table = $('<table class="ManufacturerTable"></table>');
+        var table = $('<table class="ManufacturerTable" onmouseout="EmptyCookieTable()"></table>');
         table.append("<tr><th>Name</th><th>Consumption</th><th>Color</th></tr>");
 
         $.each(data, function (key, value) {
                 var row = $('<tr class="notFirstRow"></tr>');
-                var nameCell = $('<td onclick="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.name + '</td>');
-                var countryCell = $('<td onclick="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.country + '</td>');
-                var foundedCell = $('<td onclick="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.founded + '</td>');
+                var nameCell = $('<td onmouseover="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.name + '</td>');
+                var countryCell = $('<td onmouseover="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.country + '</td>');
+                var foundedCell = $('<td onmouseover="ManufacturerCookie(' + "'" + value.name + "'" + ')">' + value.founded + '</td>');
                 row.append(nameCell);
                 row.append(countryCell);
                 row.append(foundedCell);

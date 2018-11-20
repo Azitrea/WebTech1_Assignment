@@ -34,3 +34,29 @@
 #DatabaseContentManufacturers .ManufacturerTable .notFirstRow:hover {
     background-color: midnightblue;
 }
+
+
+/*Cookie Table*/
+#CookieTable{
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+}
+
+#CookieTable .CookieTable {
+    font-size: 22px;
+    background-color: royalblue;
+    color: white;
+    border-collapse: collapse;
+}
+
+#CookieTable .CookieTable tr td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#CookieTable table tr:first-child{
+    background: mediumblue;
+}
+
+/*Cookie Table END*/
