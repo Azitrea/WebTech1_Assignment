@@ -10,6 +10,7 @@ $(function () {
                 success: function () {
                     openCar();
                     clearInputFields();
+                    alert("Success");
                 },
                 error: function () {
                     alert("oops");

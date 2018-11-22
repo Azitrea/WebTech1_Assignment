@@ -10,6 +10,8 @@ $(function () {
                 success: function () {
                     openManufacturer();
                     clearInputFields();
+                    alert("Success");
+
                 },
                 error: function () {
                     alert("oops");
