@@ -5,11 +5,11 @@ $(document).ready(function () {
         $(mbValue).click(function (event) {
             event.preventDefault();
 
-            if ($(this).find('a').attr("href") !== "index.html") {
+            if ($(this).find('a').attr("href") !== "/") {
                 $("#content").load($(this).find('a').attr("href"));
             }
             else {
-                open("index.html", "_self");
+                open("/", "_self");
             }
         })
     })
